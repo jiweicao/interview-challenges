@@ -47,10 +47,8 @@ class Opener(object):
         for item in vec:
             item = item.split()
             for key in item:
-                if self.dict.has_key(key):
-                    self.dict[key] += 1
-                else:
-                    self.dict[key] = 1
+                self.dict[key] = (self.dict.get(key,0) + 1)
+
         return self.dict
 
 # Test
